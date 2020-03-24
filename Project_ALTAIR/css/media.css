@@ -1,0 +1,284 @@
+/*---------------------------------------------------------------------------------- max-width: 1156px */
+@media (max-width: 1156px){
+	/*Переориентация блоков "Наши услуги"*/
+	.services__items{
+		display: block;
+	}
+
+	.services__item{
+		max-width: 80%;
+		min-height: 330px;
+		margin: 30px auto;
+	}
+
+	/*Убираем изображение блока "Получить консультацию"*/
+	.form__inner{
+		background-image: none;
+	}
+
+	/*Смещение элементов в блоке "Новости компании"*/
+	.news__inner{
+		display: block;
+	}
+
+	/*Изменение слайдера в блоке "Новости компании"*/
+	.news__slider{
+		max-width: 100%;
+		margin-bottom: 90px;
+	}
+
+	/*Изменение новостной ленты в блоке "Новости компании"*/
+	.news__blog{
+		max-width: 100%;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.news__blog:after{
+		content: "";
+		clear: both;
+		display: block;
+	}
+
+	/*Изменение картинок новостной ленты в блоке "Новости компании"*/
+	.news__images{
+		float: left;
+		margin-right: 50px;
+	}
+
+	.news{
+		padding-bottom: 60px;
+	}
+
+	.footer__info{
+		max-width: 465px;
+		margin-bottom: 25px;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 1050px */
+@media (max-width: 1050px){
+	/*Разделение футера на несколько элементов*/
+	.footer__inner{
+		display: block;
+	}
+
+	/*Работа с картой в футере*/
+	.footer__map{
+		max-width: 100%;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 900px */
+@media (max-width: 900px){
+	/*Скрываем стрелки слайдера*/
+	.slider .slick-btn{
+		display: none !important;
+	}
+
+	/*Работа с кнопкой в блоке "Наши услуги"*/
+	/*Работа с кнопкой в блоке "Новости компании"*/
+	.services__top,
+	.news__top{
+		display: block;
+	}
+	
+	/*Работа с заголовком в блоке "Наши услуги"*/
+	/*Работа с заголовком в блоке "Получить консультацию"*/
+	/*Работа с заголовком в блоке "Новости компании"*/
+	.services__title-box,
+	.form__title-box,
+	.news__title-box{
+		padding-left: 0;
+		text-align: center;
+		margin: 0 auto 30px;
+	}
+
+	/*Убираем линию в блоке "Наши услуги"*/
+	/*Убираем линию в блоке "Получить консультацию"*/
+	/*Убираем линию в блоке "Новости компании"*/
+	.services__title-box:before,
+	.form__title-box:before,
+	.news__title-box:before{
+		display: none;
+	}
+
+	/*Центрируем кнопку в блоке "Наши услуги"*/
+	/*Центрируем кнопку в блоке "Новости компании"*/
+	.services__btn,
+	.news__btn{
+		text-align: center;
+	}
+
+	/*Смещаем форму в блоке "Получить консультацию"*/
+	.form__box-inner{
+		display: block;
+	}
+
+	/*Левая часть формы в блоке "Получить консультацию"*/
+	.form__box-left{
+		max-width: 100%;
+	}
+	
+	/*Правая часть формы в блоке "Получить консультацию"*/
+	.form__box-right{
+		max-width: 100%;
+	}
+
+	.form__box-inner .jq-selectbox__select{
+		margin-bottom: 10px;
+	}
+
+	/*Отступ для кнопки в блоке "Получить консультацию"*/
+	.form{
+		padding-bottom: 25px;
+	}
+
+	/*Центрируем элементы в блоке "Преимущества"*/
+	.advantages__inner{
+		display: block;
+	}
+
+	.advantages-item{
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 700px */
+@media (max-width: 700px){
+	/*Адаптация верхней части шапки*/
+	.header__btn{
+		float: none;
+	}
+
+	.header__contacts{
+		text-align: center;
+	}
+
+	.header__btn:before{
+		display: none;
+	}
+	
+	/*Работа со значком у кнопки в футере*/
+	.footer__info .header__btn:before{
+		display: block;
+	}
+
+	/*Работа с элементами menu*/
+	.menu ul{
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-top: 20px;
+		z-index: 50;
+	}
+
+	.menu li{
+		display: block;
+		text-align: center;
+	}
+
+	.menu li + li{
+		padding-left: 0;
+	}
+
+	.menu a{
+		display: block;
+		background-color: #ffc222;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+	}
+
+	.menu a:hover {
+		background-color: #FFDA40;
+	}
+
+	/*Открытие значка menu для меньших размеров экрана*/
+	.header__btn-menu{
+		display: block;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 600px */
+@media (max-width: 600px){
+	.services__item{
+		max-width: 100%;
+		min-height: 375px;
+		margin: 30px auto;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 540px */
+@media (max-width: 540px){
+	/*Изменение слайдера в блоке "Новости компании"*/
+	.news__slider{
+		padding: 50px 15px 25px 25px;
+	}
+
+	/*Изменение элемента в слайдере блока "Новости компании"*/
+	.news__slider:before{
+		left: 25px;
+	}
+
+	/*Изменение правой кнопки под слайдером в блоке "Новости компании"*/
+	.news__slider-inner .slick-next{
+		right: -20px;
+	}
+	
+	/*Изменение левой кнопки под слайдером в блоке "Новости компании"*/
+	.news__slider-inner .slick-prev{
+		right: 35px;
+	}
+	
+	/*Изменение картинок новостной ленты в блоке "Новости компании"*/
+	.news__images{
+		float: none;
+	}
+
+	.news__slider-inner .slick-btn{
+		bottom: -90px;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 414px */
+@media (max-width: 414px){
+	/*Изменение размера шрифта у слайдера*/
+	.slider__title{
+		font-size: 24px;
+	}
+
+	.slider__text{
+		font-size: 16px;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 400px */
+@media (max-width: 400px){
+	/*Адаптация верхней части шапки*/
+	.header__btn:before{
+		display: block;
+	}
+
+	/*Адаптация блока "Преимущества"*/
+	.advantages-item{
+		padding: 0;
+	}
+}
+
+/*---------------------------------------------------------------------------------- max-width: 375px */
+@media (max-width: 375px){
+	/*Адаптация верхней части шапки*/
+	.header__email{
+		padding-right: 30px;
+	}
+}
+
+/*---------------------------------------------------------------------------------- min-width: 700px */
+@media (min-width: 700px){
+	/*Работа с элементами menu*/
+	.menu ul{
+		display: block !important;
+	}
+}

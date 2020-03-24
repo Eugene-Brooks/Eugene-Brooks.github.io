@@ -1,0 +1,914 @@
+/*Общие параметры для сайта*/
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #5e5e5e;
+}
+
+
+/*General styling for footer site. "Общая стилизация для footer сайта"*/
+
+
+header{
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px; 
+}
+
+/*Стилизация первой части футера*/
+.header__top{
+  background-color: #303030;
+}
+
+/*Кнопки первой части футера*/
+.header__phone,
+.header__email{
+  color: #cbcacb;
+  letter-spacing: 0.25px;
+  line-height: 45px;
+  position: relative;
+	/*font-size: 14px; Дублируется из "body"*/
+}
+
+.header__phone{
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+/*Добавление значка*/
+.header__phone:before{
+  content: "\f095";
+  font-family: 'icomoon';
+  position: absolute;
+  left: 0;
+  color: #ffc222;
+}
+
+.header__email{
+  padding-left: 24px;
+}
+
+/*Добавление значка*/
+.header__email:before{
+  content: "\f003";
+  font-family: 'icomoon';
+  position: absolute;
+  left: 0;
+  color: #ffc222;
+}
+
+.header__btn{
+  float: right;
+  line-height: 36px;
+  color: #1b1b1b;
+  background-color: #ffc222;
+  padding: 5px 20px 4px 50px;
+  font-size: 16px;
+  display: block;
+  position: relative;
+}
+
+/*Стилизация значка menu для меньших размеров экрана*/
+.header__btn-menu{
+  display: none;
+  font-size: 28px;
+}
+
+/*Работа с кликом btn*/
+#modal{
+  display: none;
+}
+
+/*Добавление значка*/
+.header__btn:before{
+  content: "\f0b1";
+  font-family: 'icomoon';
+  position: absolute;
+  left: 22px;
+  color: #1b1b1b;
+}
+
+.header__contacts:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*Стилизация второй части футера*/
+.header__content{
+  padding: 34px 0px 23px;
+}
+
+/*Меню второй части футера*/
+.header__content-inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu li{
+  display: inline-block;
+}
+
+.menu li + li{
+  padding-left: 10px;
+}
+
+.menu a{
+  color: #323232;
+  font-size: 16px;
+  line-height: 36px;
+  border: 1px solid transparent;
+  padding: 0px 16px;
+  transition: all .3s;
+	/*font-family: 'Roboto', sans-serif; Дублируется из "header"*/
+}
+
+.menu a:hover{
+  border-color: #ffc222;
+}
+
+
+/*Styling the main picture with elements after the footer. "Стилизация основной картинки с элементами после футера"*/
+
+
+.slider{
+  background-image: url("../img/slider-fon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+/*Стилизация слайдера*/
+.slider__item-content{
+  text-align: center;
+  padding-top: 110px;
+  max-width: 665px;
+  margin: 0 auto;
+}
+
+/*Текст в слайдере*/
+.slider__title{
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.slider__text{
+  line-height: 24px;
+  font-size: 18px;
+  color: #d3d2d2;
+  margin-bottom: 50px;  
+}
+
+/*Кнопка в слайдере*/
+.default-btn{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 30px 8px 24px;
+  border: 1px solid #ffc222;
+  border-right-width: 20px;
+  position: relative;
+  z-index: 2;
+  outline: none;
+}
+
+.default-btn:after{
+  content: "\f105";
+  font-family: 'icomoon';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+}
+
+/*Боковые стрелочки переключатели*/
+.slider__inner{
+  position: relative;
+}
+
+.slick-btn{
+	position: absolute;
+	top: 70%;
+	z-index: 3;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #fff;
+	/*background-color: transparent;*/
+	cursor: pointer;
+	outline: none;
+	background-color: #ffc222;
+}
+
+.slick-btn.slick-disabled{
+  cursor: default;
+  background-color: transparent;
+}
+
+.slick-btn:before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'icomoon';
+  color: #fff;
+}
+
+.slick-next{
+  right: 0;
+}
+
+.slick-next:before{
+  content: "\f105";
+}
+
+.slick-prev{
+  left: 0;
+}
+
+.slick-prev:before{
+  content: "\f104";
+}
+
+
+/*Stylization of the item "Our Services", container services. "Стилизация пункта "Наши услуги",контейнер services"*/
+
+
+.services{
+  padding: 50px 0px 30px;
+}
+
+/*Стилизация первой части контейнера services,
+Стилизация первой части контейнера news*/
+.services__top,
+.news__top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+/*Текст первой части контейнера services,
+Текст первой части контейнера form,
+Текст первой части контейнера news*/
+.services__title-box,
+.form__title-box,
+.news__title-box{
+  max-width: 520px;
+  padding-left: 140px;
+  position: relative;
+}
+
+/*Линия в блоке services,
+Линия в блоке form,
+Линия в блоке news*/
+.services__title-box:before,
+.form__title-box:before,
+.news__title-box:before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: #ffc222;
+  left: 0;
+  top: 11px;
+}
+
+/*Заголовок в блоке services,
+Заголовок в блоке form,
+Заголовок в блоке news*/
+.services__title,
+.form__title,
+.news__title{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #212020;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+/*Основной текст в блоке services,
+Основной текст в блоке form,
+Основной текст в блоке news*/
+.services__text,
+.form__text,
+.news__text{
+  letter-spacing: 0.1px;
+}
+
+/*Кнопка в блоке services,
+Кнопка в блоке news*/
+.services__btn a,
+.news__btn a{
+  color: #373636;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  padding: 5px 38px;
+  border: 3px solid #e6e6e6;
+}
+
+/*Стилизация второй части контейнера services*/
+.services__items{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Стилизация блоков услуг services*/
+.services__item{
+  max-width: 360px;
+  text-align: center;
+  padding: 30px 0px 80px;
+  position: relative;
+  min-height: 375px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
+}
+
+/*Заголовки блоков услуг services*/
+.services__item-title{
+  color: #212020;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  padding: 24px 0;
+}
+
+/*Основной текст блоков услуг services*/
+.services__item-text{
+  letter-spacing: 0.1px;
+  padding: 0px 30px 30px;
+
+}
+
+/*Кнопка в блоке services*/
+.services__item-btn{
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+
+.services__item-btn .default-btn{
+  color: #373636;
+}
+
+.services__item-btn .default-btn:after{
+  color: #fff;
+}
+
+/*Ссылка в блоке services*/
+.services__item-link{
+  color: #050505;
+  font-family: 'Roboto', sans-serif;
+  border-bottom: 1px solid #050505;
+  margin-right: 60px;
+}
+
+
+/*Stylization of the "About" item, about container. "Стилизация пункта "О компании",контейнер about"*/
+
+
+.about{
+  background-image: url("../img/about-fon.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  padding: 25px 0px 45px;
+}
+
+.about__inner{
+  max-width: 545px;
+}
+
+/*Заголовок в блоке about*/
+.about__title{
+  padding: 10px 0px 25px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Основной текст в блоке about*/
+.about__text{
+  margin-bottom: 30px;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+  color: #d3d2d2;
+}
+
+/*Кнопка в блоке about*/
+.about__btn.default-btn:after{
+  color: #000;
+}
+
+
+/*Styling the Ask Question item, form container. "Стилизация пункта "Задать вопрос",контейнер form"*/
+/*Стилизация заголовка,текста и линии совмещена с пунктом "Наши услуги",контейнер services*/
+
+.form{
+  padding-top: 30px;
+}
+
+.form__inner{
+  padding-bottom: 40px;
+  background-image: url("../img/form-fon.png");
+  min-height: 460px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+/*Стилизация формы form*/
+.form__box{
+  max-width: 850px;
+  padding-top: 45px;
+}
+
+.form__box-inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Левая половина формы form*/
+.form__box-left{
+  max-width: 260px;
+  width: 100%;
+}
+
+/*Правая половина формы form*/
+.form__box-right{
+  max-width: 555px;
+  width: 100%;
+}
+
+.form__box-inner label,
+.form__box-inner input,
+.form__box-inner textarea{
+  display: block;
+  width: 100%;
+}
+
+.form__box-inner label{
+  line-height: 36px;
+  color: #282828;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form__box-inner input{
+  margin-bottom: 8px;
+  outline: none;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  padding: 0px 10px;
+}
+
+.form__box-inner select{
+  outline: none;
+  padding-left: 17px;
+}
+
+.form__box-inner textarea{
+  outline: none;
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  height: 208px;
+  resize: none;
+  margin-bottom: 40px;
+}
+
+/*Кнопка в форме form*/
+.form__box-inner button{
+  background-color: transparent;
+  color: #282828;
+  float: right;
+}
+
+/*Переопределение стилей кнопки "Выбора" на свои, при отключении документа стилей jquery.formstyler.theme.css*/
+/*Наш документ родитель .form__box-inner*/
+.form__box-inner .jq-selectbox.jqselect{
+  display: block;
+  width: 100%;
+}
+
+.form__box-inner .jq-selectbox__select{
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  padding-left: 17px;
+}
+
+.form__box-inner .jq-selectbox__trigger-arrow:before{
+  content: "\f105";
+  font-family: 'icomoon';
+  position: absolute;
+  right: 17px;
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.form__box-inner .jq-selectbox__dropdown{
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 1px solid #e6e6e6;
+  background: #FFF;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.form__box-inner .jq-selectbox li{
+  min-height: 18px;
+  padding: 5px 17px 6px;
+  color: #231F20;
+}
+
+.form__box-inner .jq-selectbox li.selected{
+  background-color: #A3ABB1;
+  color: #FFF;
+}
+
+.form__box-inner .jq-selectbox li:hover{
+  background-color: #08C;
+  color: #FFF;
+}
+
+.form__box-inner .jq-selectbox li.disabled{
+  color: #AAA;
+}
+
+.form__box-inner .jq-selectbox li.disabled:hover{
+  background: none;
+}
+
+.form__box-inner .jq-selectbox li.optgroup{
+  font-weight: bold;
+}
+
+.form__box-inner .jq-selectbox li.optgroup:hover{
+  background: none;
+  color: #231F20;
+  cursor: default;
+}
+
+.form__box-inner .jq-selectbox li.option{
+  padding-left: 25px;
+}
+
+
+/*Styling the item "Advantages", container advantages. "Стилизация пункта "Преимущества",контейнер advantages"*/
+
+
+.advantages{
+  padding: 55px 0px 40px;
+  background-image: url("../img/adv-fon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 285px;
+  background-size: cover;
+}
+
+.advantages__inner{
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Стилизация блоков advantages*/
+.advantages-item{
+  max-width: 360px;
+  padding: 0px 20px;
+}
+
+/*Заголовки блоков advantages*/
+.advantages__title{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  padding: 60px 0px 15px;
+  position: relative;
+}
+
+/*Элемент рамка в блоке advantages*/
+.advantages__title:before{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffc222;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*Элемент галочка в блоке advantages*/
+.advantages__title:after{
+  content: "\f00c";
+  font-family: 'icomoon';
+  font-size: 14px;
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*Основной текст блоков advantages*/
+.advantages__text{
+  line-height: 24px;
+  color: #d3d2d2;
+  letter-spacing: 0.1px;
+}
+
+
+/*Stylization of the "News" item, news container. "Стилизация пункта "Новости",контейнер news"*/
+/*Стилизация первой части контейнера, заголовок,текст,линия и кнопка совмещена с пунктом "Наши услуги",контейнер services*/
+
+
+.news{
+  padding: 55px 0px 110px;
+  background-color: #f9f9f9;
+}
+
+/*Стилизация второй части контейнера news*/
+.news__inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Стилизация слайдера во второй части контейнера news*/
+.news__slider{
+  max-width: 555px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
+  padding: 60px 35px 45px 70px;
+  position: relative;
+}
+
+/*Вставка элемента над новостью в слайдере*/
+.news__slider:before{
+  content: "\f10e";
+  font-family: 'icomoon';
+  position: absolute;
+  top: 0;
+  left: 70px;
+  color: #fff;
+  font-size: 16px;
+  width: 65px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ffc222;
+}
+/*Заголовок в слайдере*/
+.news__slider-title{
+  font-size: 18px;
+  line-height: 24px;
+  color: #242424;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+/*Основной текст в слайдере*/
+.news__slider-text{
+  margin-bottom: 30px;
+}
+
+/*Автор в слайдере*/
+.news__slider-author{
+  letter-spacing: 0.1px;
+  color: #212020;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Кнопки под слайдером*/
+.news__slider-inner .slick-btn{
+  top: auto;
+  bottom: -110px;
+}
+
+/*Изменение цвета кнопки под сладйером*/
+.news__slider-inner .slick-disabled{
+  border-color: #dadada;
+}
+
+.news__slider-inner .slick-disabled:before{
+  color: #dadada;
+}
+
+/*Левая кнопка под слайдером*/
+.news__slider-inner .slick-prev{
+  right: 20px;
+  left: auto;
+}
+
+/*Правая кнопка под слайдером*/
+.news__slider-inner .slick-next{
+  right: -35px;
+}
+
+/*Стилизация блога во второй части контейнера news*/
+.news__blog{
+  max-width: 260px;
+  width: 100%;
+}
+
+/*Картинка в новости блога*/
+.news__images{
+  position: relative;
+}
+
+/*Дата публикации новости блога*/
+.news__date{
+  position: absolute;
+  background-color: #ffc222;
+  height: 55px;
+  width: 50px;
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: 700;
+  top: 0px;
+  left: 10px;
+}
+
+/*Заголовок новости блога*/
+.news__blog-title{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  color: #242424;
+  padding: 12px 0;
+}
+
+/*Основной текст новости блога*/
+.news__blog-text{
+  letter-spacing: 0.1px;
+  color: #5e5e5e;
+}
+
+
+/*Stylization of the "Basement" site, container footer. "Стилизация "Подвала" сайта, контейнер footer"*/
+
+
+.footer__content{
+  background-color: #595959;
+  padding: 20px 0px 30px;
+}
+
+/*Распределили два блока footer по сторонам*/
+.footer__inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info{
+  max-width: 360px;
+}
+
+/*Стилизация кнопки в блоке с контактами footer*/
+.footer__inner .header__btn{
+  float: none;
+  display: inline-block;
+}
+
+/*Стилизация заголовка в блоке с контактами footer*/
+.footer__title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+}
+
+/*Стилизация основного текста в блоке с контактами footer*/
+.footer__text{
+  color: #d3d2d2;
+  margin-bottom: 20px;
+}
+
+/*Стилизация контактов в блоке с контактами footer*/
+.footer__list{
+  padding-top: 10px;
+}
+
+.footer__list li{
+  margin-top: 10px;
+}
+
+.footer__list a{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 33px;
+  position: relative;
+}
+
+/*Работа со значками контактов в блоке контакты footer*/
+.footer__list a:before{
+  content: '\f003';
+  position: absolute;
+  left: 0;
+  color: #ffc222;
+  font-family: 'icomoon';
+}
+
+.footer__list .footer__phone:before{
+  content: "\f095";
+  left: 3px;
+}
+
+.footer__list .footer__adress:before{
+  content: "\f041";
+  left: 3px;
+}
+
+/*Стилизация блока footer с картой*/
+.footer__map{
+  padding-top: 10px;
+  max-width: 630px;
+  width: 100%;
+}
+
+.footer__map iframe{
+  width: 100%;
+}
+
+/*Стилизация строки копирайта в footer*/
+.footer__copy{
+  background-color: #303030;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 8px 0;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*Стилизация вызываемого окна при клике на "Беспланая консультация"*/
+
+
+#modal{
+  width: 300px;
+}
+
+#modal input{
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  padding: 0px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/*Кнопка в форме*/
+#modal input[type="submit"]{
+  background-color: #ffc222;
+  border: none;
+}
