@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<title>JMK</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<!-- Оболочка для создания Fullscreen (занимает весь экран) экрана -->
+		<main class="page">
+			<!---------------------- Раздел сайта "HEADER" ---------------------->
+			<header class="header">
+				<div class="header__row">
+					<!-- Навигация по сайту -->
+					<nav class="header__menu menu">
+						<!-- Оболочка для создания бургер-меню при адаптивной версии
+						icon-menu привязан к main.js и нужен для бургер-меню -->
+						<div class="menu__icon icon-menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<!-- Оболочка для создания меню -->
+						<div class="menu__body">
+							<ul class="menu__list">
+								<li><a href="#" class="menu__link">О НАС</a></li>
+								<li><a href="#" class="menu__link">РАБОТЫ</a></li>
+								<li><a href="#" class="menu__link">МАГАЗИН</a></li>
+								<li><a href="#" class="menu__link">СВЯЗЬ</a></li>
+							</ul>
+						</div>
+					</nav>
+					<!-- Оболочка для логотипа -->
+					<div class="header__logo"><img src="img/logo.png" alt=""></div>
+				</div>
+			</header>
+			<!---------------------- Раздел сайта "MAIN-SCREEN" ---------------------->
+			<!-- Оболочка для создания первого экрана -->
+			<div class="main-screen">
+				<!-- Оболочка для картинки на первом экране -->
+				<div class="main-screen__bg ibg">
+					<img src="img/bg_main.jpg" alt="">
+				</div>
+			</div>
+			<!---------------------- Оболочка основного контента ---------------------->
+			<div class="content">
+				<!---------------------- Раздел сайта "GENERATION" ---------------------->
+				<section class="generation">
+					<!-- Оболочка ограничевающая контент по краям -->
+					<div class="container">
+						<!-- Создается класс 'block' универсальный класс, для похожих элементов
+						которые часто встрачается на сайте-->
+						<div class="generation__block block">
+							<!-- Изображение -->
+							<div class="block__icon"><img src="img/icons/title/01.png" alt=""></div>
+							<!-- Заголовок -->
+							<h1 class="block__title">НОВОЕ ПОКОЛЕНИЕ ВИНТАЖНОГО ИНТЕРЬЕРА</h1>
+							<!-- Описание -->
+							<div class="block__text">Винтажный интерьер пользуются большой популярностью не только у ценителей старины, но и у тех, кто хочет выделиться на фоне других. Ретро-образ был символам стран. Так Англию ассоциировали с «Родстером», Америку с «Дайтоном» (Harley-Davidson). В настоящее время оригинальные ретро-элементы декора являются настоящими раритетами и стоят дорого. Некоторые фирмы специализируются на выпуске винажных моделей, например компания Autum выпускает «Epitaph Cruiser» стоимостью около $3000.</div>
+						</div>
+					</div>
+				</section>
+				<!---------------------- Раздел сайта "BRANDS" ---------------------->
+				<section class="brands">
+					<!-- Оболочка для Flex-контейнера -->
+					<div class="brands__row">
+						<!-- Первая колонка -->
+						<div class="brands__column brands__column_b">
+							<!-- Оболочка ссылка для изображения-->
+							<a href="" class="brands__item item">
+								<!-- Логотип на фоне изображения -->
+								<span class="item__logo">
+									<img src="img/logos/01.png" alt="">
+								</span>
+								<!-- Фоновое изображение -->
+								<span class="item__image ibg">
+									<img src="img/brands/01.jpg" alt="">
+								</span>
+							</a>
+						</div>
+						<!-- Вторая колонка -->
+						<div class="brands__column">
+							<!-- Создается класс 'block' универсальный класс, для похожих элементов
+							которые часто встрачается на сайте-->
+							<div class="brands__content block">
+								<!-- Изображение -->
+								<div class="block__icon"><img src="img/icons/title/02.png" alt=""></div>
+								<!-- Заголовок -->
+								<h2 class="block__title">ВИНТАЖНАЯ ОЛИВА</h2>
+								<!-- Описание -->
+								<div class="block__text block__text_j">Первая ассоциация с этим цветом — стиль «Милитари», который так полюбился многим. Главное его преимущество — универсальность и нейтральность, а это значит, что он подходит всем. Главное — правильно сочетать его с другими цветами, ведь от этого будет зависеть то впечатление, которое вы хотите произвести на окружающих. Оливковый цвет можно объединять в одном комплекте как с нейтральными оттенками, так и с яркими, и он везде будет хорошо смотреться.</div>
+							</div>
+							<!-- Оболчка для изображения под текстом-->
+							<div class="brands__image ibg">
+								<img src="img/brands/02.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+				<!---------------------- Раздел сайта "BRANDS_REV" ---------------------->
+				<section class="brands brands_rev">
+					<!-- Оболочка для Flex-контейнера -->
+					<div class="brands__row">
+						<!-- Первая колонка -->
+						<div class="brands__column brands__column_b">
+							<!-- Оболочка ссылка для изображения-->
+							<a href="" class="brands__item item">
+								<!-- Логотип на фоне изображения -->
+								<span class="item__logo">
+									<img src="img/logos/02.png" alt="">
+								</span>
+								<!-- Фоновое изображение -->
+								<span class="item__image ibg">
+									<img src="img/brands/04.jpg" alt="">
+								</span>
+							</a>
+						</div>
+						<!-- Вторая колонка -->
+						<div class="brands__column">
+							<!-- Создается класс 'block' универсальный класс, для похожих элементов
+							которые часто встрачается на сайте-->
+							<div class="brands__content block">
+								<!-- Изображение -->
+								<div class="block__icon"><img src="img/icons/title/03.png" alt=""></div>
+								<!-- Заголовок -->
+								<h2 class="block__title">ПРОИЗВОДСТВО</h2>
+								<!-- Описание -->
+								<div class="block__text block__text_j">Один и тот же предмет нередко производился разными компаниями в разное время. Наибольшую ценность имеют предметы первых тиражей, от производителя, который первым начал выпуск изделия и для которого оно было создано изначально. Последующие выпуски, особенно от вторичных производителей, могут содержать изменения, снижающие стоимость производства, и тем самым удаляться от изначальной задумки автора.</div>
+							</div>
+							<!-- Оболчка для изображения под текстом-->
+							<div class="brands__image ibg">
+								<img src="img/brands/03.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+				<!---------------------- Раздел сайта "BRANDS_LAST" ---------------------->
+				<section class="brands brands_last">
+					<!-- Оболочка для Flex-контейнера -->
+					<div class="brands__row">
+						<!-- Первая колонка -->
+						<div class="brands__column">
+							<!-- Оболочка ссылка для изображения-->
+							<a href="" class="brands__item item">
+								<!-- Логотип на фоне изображения -->
+								<span class="item__logo">
+									<img src="img/logos/03.png" alt="">
+								</span>
+								<!-- Фоновое изображение -->
+								<span class="item__image ibg">
+									<img src="img/brands/05.jpg" alt="">
+								</span>
+							</a>
+						</div>
+						<!-- Вторая колонка -->
+						<div class="brands__column">
+							<!-- Создается класс 'block' универсальный класс, для похожих элементов
+							которые часто встрачается на сайте-->
+							<div class="brands__content block">
+								<!-- Изображение -->
+								<div class="block__icon"><img src="img/icons/title/04.png" alt=""></div>
+								<!-- Заголовок -->
+								<h2 class="block__title">ВИНТАЖНЫЙ ТОРШЕР - M. HULOT</h2>
+								<!-- Описание -->
+								<div class="block__text block__text_j">Торшер M. HULOT предназначен для освещения помещений и декоративного обустройства. Он обладает винтажным дизайном и оснащен защитой от перегорания или выгорания ткани. Жесткая основа для установки, не полностью, но немного поглощает вредные цветовые сигменты. Удивительный дизайн и надежность происводства повзоляют наслаждаться этим элементом.</div>
+							</div>
+							<!-- Оболчка для изображения под текстом-->
+							<div class="brands__image ibg">
+								<img src="img/brands/06.jpg" alt="">
+							</div>
+						</div>
+						<!-- Третья колонка -->
+						<div class="brands__column">
+							<!-- Оболочка ссылка для изображения-->
+							<a href="" class="brands__item item">
+								<!-- Логотип на фоне изображения -->
+								<span class="item__logo">
+									<img src="img/logos/03.png" alt="">
+								</span>
+								<!-- Фоновое изображение -->
+								<span class="item__image ibg">
+									<img src="img/brands/07.jpg" alt="">
+								</span>
+							</a>
+						</div>
+					</div>
+				</section>
+				<!---------------------- Раздел сайта "SLIDER" ---------------------->
+				<section class="slider">
+					<!-- Оболочка ограничевающая контент по краям -->
+					<div class="container">
+						<!-- Оболочка для слайдера-->
+						<div class="slider__body">
+							<!-- Первый слайд -->
+							<div class="slider__item">
+								<!-- Изображение -->
+								<div class="slider__icon"><img src="img/icons/twitter.png" alt=""></div>
+								<!-- Заголовок -->
+								<h3 class="slider__title">JMK Moscow @jmk <span>/ 35 мин</span></h3>
+								<!-- Описание -->
+								<div class="slider__text">Наша компания рада преоставить большой выбор винтажных элементов декора, для настоящих ценителей утонченности и элегантности. Окунитесь в атмосферу Нью-Йорка 80-х годов с нашей продукцией.</div>
+							</div>
+							<!-- Второй слайд -->
+							<div class="slider__item">
+								<!-- Изображение -->
+								<div class="slider__icon"><img src="img/icons/twitter.png" alt=""></div>
+								<!-- Заголовок -->
+								<h3 class="slider__title">Jey Fosters  @fosters_miss <span>/ 45 мин</span></h3>
+								<!-- Описание -->
+								<div class="slider__text">Первые впечатления, когда я опробовала эту продукцию, были просто потрясающие. Она настолько удобна и комфортна, что теперь я думаю о том, как вообще люди живут без подобных предметов интерьера.</div>
+							</div>
+							<!-- Третий слайд -->
+							<div class="slider__item">
+								<!-- Изображение -->
+								<div class="slider__icon"><img src="img/icons/twitter.png" alt=""></div>
+								<!-- Заголовок -->
+								<h3 class="slider__title">Albert Rill  @doctor-who <span>/ 52 мин</span></h3>
+								<!-- Описание -->
+								<div class="slider__text">Сделано безумно качественно и со вкусом. Ни единого скрипа или прочих неудобств. Отлично занимает место в спальне. Шкаф-купе в ретро-стиле одно из лучших преобретений.</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!---------------------- Раздел сайта "SHOP" ---------------------->
+				<div class="shop">
+					<!-- Оболочка для верхней части части блока, Flex-контейнер -->
+					<div class="shop__body">
+						<!-- Первая колонка -->
+						<div class="shop__column shop__column_b">
+							<div class="shop__block block-shop">
+								<!-- Верхняя часть первой колонки, Flex-контейнер -->
+								<div class="block-shop__row">
+									<!-- Первая картинка в верхней части -->
+									<div class="block-shop__column">
+										<!-- Оболочка ссылка для изображения-->
+										<a href="" class="block-shop__item block-shop__item_l item">
+											<!-- Логотип на фоне изображения -->
+											<span class="item__logo">
+												<img src="img/icons/bike.png" alt="">
+												<span>КУПИТЬ СЕЙЧАС</span>
+											</span>
+											<!-- Фоновое изображение -->
+											<span class="item__image ibg">
+												<img src="img/shop/01.jpg" alt="">
+											</span>
+										</a>
+									</div>
+									<!-- Вторая картинка в верхней части -->
+									<div class="block-shop__column">
+										<!-- Оболочка ссылка для изображения-->
+										<a href="" class="block-shop__item block-shop__item_l item">
+											<span class="item__logo">
+												<img src="img/icons/bike.png" alt="">
+												<span>КУПИТЬ СЕЙЧАС</span>
+											</span>
+											<!-- Фоновое изображение -->
+											<span class="item__image ibg">
+												<img src="img/shop/02.jpg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>
+								<!-- Нижняя часть первой колонки -->
+								<!-- Оболочка ссылка для изображения-->
+								<a href="" class="block-shop__item item">
+									<!-- Логотип на фоне изображения -->
+									<span class="item__logo">
+										<img src="img/icons/bike.png" alt="">
+										<span>КУПИТЬ СЕЙЧАС</span>
+									</span>
+									<!-- Фоновое изображение -->
+									<span class="item__image ibg">
+										<img src="img/shop/03.jpg" alt="">
+									</span>
+								</a>
+							</div>
+						</div>
+						<!-- Вторая колонка -->
+						<div class="shop__column">
+							<!-- Оболочка ссылка для изображения-->
+							<a href="" class="block-shop__item block-shop__item_b item">
+								<!-- Логотип на фоне изображения -->
+								<span class="item__logo">
+									<img src="img/icons/bike.png" alt="">
+									<span>КУПИТЬ СЕЙЧАС</span>
+								</span>
+								<!-- Фоновое изображение -->
+								<span class="item__image ibg">
+									<img src="img/shop/04.jpg" alt="">
+								</span>
+							</a>
+						</div>
+						<!-- Третья колонка -->
+						<div class="shop__column">
+							<!-- Оболочка ссылка для изображения-->
+							<a href="" class="block-shop__item block-shop__item_b item">
+								<!-- Логотип на фоне изображения -->
+								<span class="item__logo">
+									<img src="img/icons/bike.png" alt="">
+									<span>КУПИТЬ СЕЙЧАС</span>
+								</span>
+								<!-- Фоновое изображение -->
+								<span class="item__image ibg">
+									<img src="img/shop/06.jpg" alt="">
+								</span>
+							</a>
+						</div>
+						<!-- Четвертая колонка -->
+						<div class="shop__column shop__column_b">
+							<div class="shop__block block-shop">
+								<!-- Верхняя часть четвертой колонки -->
+								<!-- Оболочка ссылка для изображения-->
+								<a href="" class="block-shop__item item">
+									<!-- Логотип на фоне изображения -->
+									<span class="item__logo">
+										<img src="img/icons/bike.png" alt="">
+										<span>КУПИТЬ СЕЙЧАС</span>
+									</span>
+									<!-- Фоновое изображение -->
+									<span class="item__image ibg">
+										<img src="img/shop/07.jpg" alt="">
+									</span>
+								</a>
+								<!-- Нижняя часть четвертой колонки, Flex-контейнер -->
+								<div class="block-shop__row">
+									<!-- Первая картинка в нижней части -->
+									<div class="block-shop__column">
+										<!-- Оболочка ссылка для изображения-->
+										<a href="" class="block-shop__item block-shop__item_l item">
+											<!-- Логотип на фоне изображения -->
+											<span class="item__logo">
+												<img src="img/icons/bike.png" alt="">
+												<span>КУПИТЬ СЕЙЧАС</span>
+											</span>
+											<!-- Фоновое изображение -->
+											<span class="item__image ibg">
+												<img src="img/shop/08.jpg" alt="">
+											</span>
+										</a>
+									</div>
+									<!-- Вторая картинка в нижней части -->
+									<div class="block-shop__column">
+										<!-- Оболочка ссылка для изображения-->
+										<a href="" class="block-shop__item block-shop__item_l item">
+											<!-- Логотип на фоне изображения -->
+											<span class="item__logo">
+												<img src="img/icons/bike.png" alt="">
+												<span>КУПИТЬ СЕЙЧАС</span>
+											</span>
+											<!-- Фоновое изображение -->
+											<span class="item__image ibg">
+												<img src="img/shop/09.jpg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Оболочка для нижней части блока с кнопкой -->
+					<div class="shop__footer">
+						<div class="container">
+							<a href="" class="shop__btn">ПЕРЕЙТИ В МАГАЗИН</a>
+						</div>
+					</div>
+				</div>
+				<!---------------------- Раздел сайта "SUBSCRIBE" ---------------------->
+				<div class="subscribe">
+					<!-- Оболочка ограничевающая контент по краям -->
+					<div class="container">
+						<div class="subscribe__body">
+							<!-- Логотип -->
+							<div class="subscribe__logo">
+								<img src="img/logo.png" alt="">
+							</div>
+							<!-- Слоган -->
+							<div class="subscribe__label">Оставайся в седле!</div>
+							<!-- Форма -->
+							<form action="#" class="subscribe__form">
+								<!-- Поле ввода в форме -->
+								<div class="subscribe__input">
+									<input autocomplete="off" type="text" name="form[]" data-value="enter your email..." class="input req email">
+								</div>
+								<!-- Кнопка в форме -->
+								<div class="subscribe__button">
+									<button type="submit" class="subscribe__btn">GO</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!---------------------- Раздел сайта "FOOTER" ---------------------->
+				<footer class="footer">
+					<!-- Оболочка ограничевающая контент по краям -->
+					<div class="container">
+						<!-- Оболочка для Flex-контейнера -->
+						<div class="footer__row">
+							<!-- Первая колонка -->
+							<div class="footer__column">
+								<!-- Адресс -->
+								<div class="footer__address">
+									<p>JMK Moscow</p>
+									<p>1145 Wall Street </p>
+									<p>Moscow, 164515  - info@moscow.ru</p>
+								</div>
+							</div>
+							<!-- Вторая колонка -->
+							<div class="footer__column">
+								<div class="footer__social social">
+									<!-- Первый значек соц.сети -->
+									<a href="" class="social__link">
+										<img src="img/icons/social/01.png" alt="">
+									</a>
+									<!-- Второй значек соц.сети -->
+									<a href="" class="social__link">
+										<img src="img/icons/social/02.png" alt="">
+									</a>
+									<!-- Третий значек соц.сети -->
+									<a href="" class="social__link">
+										<img src="img/icons/social/03.png" alt="">
+									</a>
+								</div>
+							</div>
+							<!-- Третья колонка -->
+							<div class="footer__column">
+								<!-- Оболочка для ссылки на автора -->
+								<a href="" class="footer__dev dev">
+									<!-- Автор -->
+									<span class="dev__text">Eugene Brooks by</span>
+									<!-- Логотип -->
+									<span class="dev__icon">
+										<img src="img/icons/dev.png" alt="">
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</main>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/vendors.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1289 @@
+/* Загружаемая часть из mixins.css --------------------------------------------------------- Миксины */
+
+/* Загружаемая часть ------------------------------------------------------------------------ Шрифты */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap");
+
+/* Загружаемая часть из null.css ---------------------------------------- Обнуление, Общие параметры */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Lato";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: "Lato";
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Загружаемая часть ---------------------------------------------------------------------- Оболочка */
+.wrapper {
+  /*Убирает нижний скролл, если изображение большое*/
+  overflow: hidden;
+  /*Минимальная высота, что бы 'wrapper' занимал всю высоту экрана*/
+  min-height: 100%;
+}
+
+/* Загружаемая часть ---------------------------------------------------------------- Основная сетка */
+.container {
+  /*Максимальная ширина контейнера, контейнер в данном макете 'footer' и второй блок*/
+  max-width: 1130px;
+  /*Убирает отступы по краям контейнера, что бы при уменьшении не прилипал к краям*/
+  padding: 0px 15px;
+  /*Центровка всего контейнера*/
+  margin: 0px auto;
+}
+
+/* Загружаемая часть из ui.css ----------------------------- Файлы UI стилей, форм и готовых классов */
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.ibg img {
+  display: none;
+}
+
+.slick-slider {
+  position: relative;
+}
+.slick-slider .slick-list {
+  overflow: hidden;
+}
+.slick-slider .slick-track {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  /*Lобавляется что бы если в слайдах было разное количество текста точки двигались
+  связывается с SLIDERS из main.js*/
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.slick-slider .slick-dots {
+  /*Указываются точки под слайдером*/
+  padding: 100px 0px 0px 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slick-slider .slick-dots li {
+  /*Указываются промежутки между точками*/
+  margin: 0px 5px;
+}
+.slick-slider .slick-dots li button {
+  font-size: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  /*Указывается цвет кружка когда он не выделен*/
+  border: 1px solid #c8c8c8;
+  /*Прозрачный фон кружка когда он не выделен*/
+  background-color: transparent;
+}
+.slick-slider .slick-dots li.slick-active button {
+  /*Указывается цвет кружка когда он выделен*/
+  background-color: #a9afb3;
+}
+
+@media (max-width: 1100px) {
+  .slick-slider .slick-dots {
+    padding: 50px 0px 0px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .slick-slider .slick-dots {
+    padding: 30px 0px 0px 0px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------- Общий блок */
+/*Определение позиционирования оболочки для создания Fullscreen экрана*/
+.page {
+  /*Абсолютное позиционирование по центру*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  /*Разворачивает элементы в колонку*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* ----------------------------------------------------------------------------------------------------- Блок HEADER */
+/*Определение позиционирования для всего блока*/
+.header {
+  /*Абсолютное позиционирование по центру*/
+  position: absolute;
+  width: 100%;
+  /*Вытаскивает все элементы на передний план*/
+  z-index: 50;
+  left: 0;
+  /*Отступ сверху*/
+  top: 35px;
+}
+
+/*Изменение позиционирования всех элементов*/
+.header__row {
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  /*Центрирует по вертикали*/
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /*/*Центрирует по горизонтали*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*Высота указана что бы элементы меню выровнились по центру*/
+  height: 85px;
+}
+
+/*Определение позиционирования для логотипа
+если логотип нужен ссылкой то вытаскиваем его 'z-index'*/
+.header__logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 2;
+    /*Миксин @include tr(0px, 0px, 0px);*/
+    transform: translate3d(-50%, 0px, 0px);
+    -webkit-transform: translate3d(-50%, 0px, 0px);
+    -ms-transform: translate3d(-50%, 0px, 0px);
+    -o-transform: translate3d(-50%, 0px, 0px);
+    -moz-transform: translate3d(-50%, 0px, 0px); }
+
+/*Изменение позиционирования элементов меню*/
+.menu__list {
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+}
+
+/*Изменение отступов у элементов меню*/
+.menu__list li {
+  position: relative;
+  padding: 0px 37.5px;
+}
+
+/*Изменение отступа у второго элемента меню
+110px отступ справа*/
+.menu__list li:nth-child(2) {
+  padding: 0px 110px 0px 37.5px;
+}
+
+/*Изменение отступа у третьего элемента меню
+110px отступ слева*/
+.menu__list li:nth-child(3) {
+  padding: 0px 37.5px 0px 110px;
+}
+
+/*Добавление точки между элементами меню*/
+.menu__list li:after {
+  content: '';
+  width: 2px;
+  height: 2px;
+  background-color: #4d4959;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin: -1.5px 0px 0px 0px;
+}
+
+/*Удаление точки после второго и последнего элемента меню*/
+.menu__list li:nth-child(2):after,
+.menu__list li:last-child:after {
+  display: none;
+}
+
+/*Изменение параметров размера и цвета у элементов меню*/
+.menu__link {
+  color: #4d4959;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.6px;
+}
+
+.menu__link::after{
+  /*Добавляет линию под элементами меню*/
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 3px;
+  background-color: #64c29e;
+  /*Делает линию невидимой, сжимая в ноль*/
+  transform: scale(0);
+  /*Скорость появления анимации*/
+  transition: all 0.2s;
+}
+
+.menu__link:hover::after{
+  /*Делает линию видмой при наведении*/
+  transform: scale(1);
+}
+/*-------------------------------- Медиа-запросы для раздела HEADER --------------------------------*/
+@media (max-width: 767px) {
+  .header {
+    /*Уменьшение отступа от логотипа до верхней границы*/
+    top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*Задается для возможности прокрутки свернутого меню*/
+    overflow: auto;
+    /*Задается цвет фона при свернутом меню*/
+    background-color: #4d4959;
+    /*Делает элементы меню ниже логотипа*/
+    padding: 150px 0px 20px 0px;
+    /*Миксин @include tr(0px, 0px, 0px);
+    -100% задается для того что бы убрать вверх бургер-меню*/
+    transform: translate3d(0px, -100%, 0px);
+    -webkit-transform: translate3d(0px, -100%, 0px);
+    -ms-transform: translate3d(0px, -100%, 0px);
+    -o-transform: translate3d(0px, -100%, 0px);
+    -moz-transform: translate3d(0px, -100%, 0px);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu__body.active {
+    /*Миксин @include tr(0px, 0px, 0px);
+    при нажатии добавляется класс 'active' из 'main.js' и меню открывается*/
+    transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+  }
+
+  .menu__list {
+    /*Разворачивает элементы меню в колонку*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*Выстраивание элементов меню по центру*/
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /*Выстраивание элементов меню по центру*/
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .menu__list li {
+    /*Убирает все отступы и изменяет отступ вниз от первого элемента*/
+    padding: 0 0 45px 0;
+  }
+
+  .menu__list li:nth-child(2),
+  .menu__list li:nth-child(3) {
+    /*Убирает все отступы и изменяет отступ вниз от второго и третьего элемента*/
+    padding: 0 0 45px 0;
+  }
+
+  .menu__list li:nth-child(2):after,
+  .menu__list li:nth-child(3):after {
+    /**/
+    display: block;
+  }
+
+  .menu__list li:last-child {
+    padding: 0;
+  }
+
+  .menu__list li:after {
+    width: 4px;
+    height: 4px;
+    /*Задается цвет точек при свернутом меню*/
+    background-color: #fff;
+    right: 50%;
+    top: 40px;
+    margin: 0px -2px 0px 0px;
+  }
+
+  .menu__link {
+    /*Задается цвет элементов меню при свернутом меню*/
+    color: #fff;
+    /*Увеличение шрифта элементов меню при свернутом меню*/
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .icon-menu {
+    display: block;
+    position: absolute;
+    top: 33px;
+    right: 15px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .icon-menu span {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: 8px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    /*Цвет полосок бургер-меню в свернутом виде*/
+    background-color: #4d4959;
+  }
+
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+
+  .icon-menu.active span {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    /*Цвет полосок бургер-меню в развернутом виде*/
+    background-color: #fff;
+  }
+
+  .icon-menu.active span:first-child {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+
+  .icon-menu.active span:last-child {
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    bottom: 8px;
+  }
+}
+
+/* Заготовка бургер-меню
+
+	.header-menu__icon{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+
+*/
+
+/* ----------------------------------------------------------------------------------------------------- Блок MAIN-SCREEN */
+/*Определение позиционирования оболочки первого экрана*/
+.main-screen {
+  /*Позволяем увеличиваться но запрещаем уменьшатся, 100% базовое значение*/
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  /*Относительное позиционирование от 'page'*/
+  position: relative;
+}
+
+/*Определение позиционирования оболочки для картинки на первом экране*/
+.main-screen__bg {
+  /*Абсолютное позиционирование по центру*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* ----------------------------------------------------------------------------------------------------- Блок GENERATION */
+.generation {
+  /*Внутренние отступы снизу и вверху от содержимого блока*/
+  padding: 120px 0;
+  /*Цвет фона блока*/
+  background-color: #f7f7f7;
+}
+/*-------------------------------- Медиа-запросы для раздела GENERATION --------------------------------*/
+@media (max-width: 900px) {
+  .generation {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 600px) {
+  .generation {
+    padding: 30px 0;
+  }
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------- Стили общих блоков */
+
+
+
+/* -- Блок GENERATION -- */
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.block {
+  /*Выравнивание содержимого блока по центру*/
+  text-align: center;
+}
+
+/* -- Блок GENERATION -- */
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.block__icon {
+  /*Изменение отступа вниз от изображения до заголовка*/
+  margin: 0px 0px 30px 0px;
+}
+
+/* -- Блок GENERATION -- */
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.block__title {
+  color: #353738;
+  font-size: 18px;
+  font-weight: 700;
+  /*Изменение размера оступов при переносе на новую строку*/
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  /*Изменение отступа вниз от заголовка до текста*/
+  margin: 0px 0px 18px 0px;
+}
+
+/* -- Блок GENERATION -- */
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.block__text {
+  color: #848789;
+  font-size: 18px;
+  line-height: 34px;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.block__text_j {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.block__text_j:after {
+  /*Добавление линии под описанием*/
+  content: '';
+  display: block;
+  margin: 35px auto 0px auto;
+  width: 50px;
+  height: 1px;
+  background-color: #ebebeb;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.brands__row {
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.brands__column {
+  /*Все колонки занимают одну треть 33.333%*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 33.333%;
+  flex: 0 1 33.333%;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+.brands__column_b {
+  /*Большая колонка занимает 66.667%*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 66.667%;
+  flex: 0 1 66.667%;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.brands__content {
+  /*Изменение отступов*/
+  padding: 70px 65px 55px 65px;
+  /*Добавляется для описания треугольника над картинкой*/
+  position: relative;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.brands__content:after {
+  /*Добавление треугольника над картинкой*/
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin: 0px 0px 0px -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+.brands__image {
+  /*Задается 37.51% что бы было видно изображение внизу текста*/
+  padding: 0px 0px 37.51% 0px;
+}
+
+/* -- Блок BRANDS_REV -- */
+/*Отображаем второй блок зеркально первому*/
+.brands_rev .brands__column {
+  /*Миксин @include flexorder()*/
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+
+/* -- Блок BRANDS_REV -- */
+/*Отображаем второй блок зеркально первому*/
+.brands_rev .brands__column_b {
+  /*Миксин @include flexorder()*/
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+/* -- Блок BRANDS_SLIDER -- */
+/* -- Блок BRANDS_SHOP -- */
+.item {
+  /*Задается что бы было полностью видно изображение соседнего блока*/
+  height: 100%;
+  /*Делается блочным элементом*/
+  display: block;
+  position: relative;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+/* -- Блок BRANDS_SLIDER -- */
+/* -- Блок BRANDS_SHOP -- */
+.item__logo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  /*Расположение в колону*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /*Миксин @anim (0.3s, 0s);*/
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  /*Выравнивание по центру*/
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /*Выравнивание по центру*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*Добавление поверхностного полупрозрачного цвета*/
+  background-color: rgba(100, 194, 158, 0.5);
+  z-index: 2;
+  opacity: 0;
+  /*Скрывает полупрозрачный цвет*/
+  visibility: hidden;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+/* -- Блок BRANDS_SLIDER -- */
+/* -- Блок BRANDS_SHOP -- */
+.item:hover .item__logo {
+  opacity: 1;
+  /*Показывает полупрозрачный цвет*/
+  visibility: visible;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+/* -- Блок BRANDS_SLIDER -- */
+/* -- Блок BRANDS_SHOP -- */
+.item__logo span {
+  /*Изменение размера и стиля надписи при наведении в блоке SHOP*/
+  /*Отступ от надписи до логотипа при наведении*/
+  margin: 10px 0px 0px 0px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* -- Блок BRANDS -- */
+/* -- Блок BRANDS_REV -- */
+/* -- Блок BRANDS_LAST -- */
+/* -- Блок BRANDS_SLIDER -- */
+/* -- Блок BRANDS_SHOP -- */
+.item__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*---------- Медиа-запросы для раздела BRANDS ----------*/
+/*---------- Медиа-запросы для раздела BRANDS_REV ----------*/
+/*---------- Медиа-запросы для раздела BRANDS_LAST ----------*/
+@media (max-width: 1500px) {
+  .block__text_j:after {
+    /*Уменьшение полоски под описанием*/
+    margin: 15px auto 0px auto;
+  }
+}
+
+/*---------- Медиа-запросы для раздела BRANDS ----------*/
+/*---------- Медиа-запросы для раздела BRANDS_REV ----------*/
+/*---------- Медиа-запросы для раздела BRANDS_LAST ----------*/
+@media (max-width: 1500px) {
+  .brands__content {
+    /*Уменьшение отступов по краям*/
+    padding: 40px 35px 30px 35px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .brands_last .brands__column:nth-child(1) {
+    /*Переставляем 1 изображение во второй блок при адаптиве*/
+    /*Миксин @include flexorder()*/
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
+  .brands_last .brands__column:nth-child(2) {
+    /*Переставляем 2 изображение в первый блок при адаптиве*/
+    /*Миксин @include flexorder()*/
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+  }
+  .brands_last .brands__column:nth-child(3) {
+    /*Миксин @include flexorder()*/
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+  }
+  .brands__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    /*Перестроение элементов в колонку*/
+    flex-direction: column;
+  }
+}
+
+/*---------- Медиа-запросы для раздела BRANDS ----------*/
+/*---------- Медиа-запросы для раздела BRANDS_REV ----------*/
+/*---------- Медиа-запросы для раздела BRANDS_LAST ----------*/
+/*---------- Медиа-запросы для раздела SLIDER ----------*/
+/*---------- Медиа-запросы для раздела SHOP ----------*/
+@media (max-width: 1100px) {
+  .item {
+    /*Позволяет вернуть изображение из левой колонки при адаптиве*/
+    height: auto;
+    padding: 0px 0px 70% 0px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------- Блок SLIDER */
+.slider {
+  /*Задается цвет для фона*/
+  background-color: #f7f7f7;
+  /*Указываются внешние отступы сверху и снизу*/
+  padding: 120px 0 60px 0;
+}
+
+.slider__item {
+  text-align: center;
+}
+
+.slider__icon {
+  /*Указываются внутренние отступы снизу*/
+  margin: 0px 0px 35px 0px;
+}
+
+.slider__title {
+  /*Указывается цвет автора в заголовке*/
+  color: #353738;
+  font-size: 18px;
+  font-weight: 700;
+  /*Указываются внутренние отступы снизу*/
+  margin: 0px 0px 20px 0px;
+}
+
+.slider__title span {
+  font-weight: 300;
+  /*Указывается цвет времени в заголовке*/
+  color: #848789;
+}
+
+.slider__text {
+  /*Выравнивание по центру*/
+  text-align: center;
+  color: #848789;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 34px;
+}
+/*-------------------------------- Медиа-запросы для раздела SLIDER --------------------------------*/
+@media (max-width: 1100px) {
+  .slider {
+    padding: 80px 0 60px 0;
+  }
+}
+@media (max-width: 767px) {
+  .slider {
+    padding: 50px 0 30px 0;
+  }
+  .slider__icon {
+    margin: 0px 0px 25px 0px;
+  }
+  .slider__title {
+    margin: 0px 0px 15px 0px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------- Блок SHOP */
+.shop__body {
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+}
+
+.shop__column {
+  /*Каждая из двух маленьких картинок занимает по половине от одной третей 16.666%*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 16.666%;
+  flex: 0 1 16.666%;
+}
+
+.shop__column_b {
+  /*Большая картинка занимает одну треть 33.333%*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 33.333%;
+  flex: 0 1 33.333%;
+}
+
+.shop__footer {
+  /*Внешний отступ сверху и снизу*/
+  padding: 75px 0;
+  /*Определение по центру*/
+  text-align: center;
+  /*Фоновый цвет*/
+  background-color: #282f35;
+}
+
+.shop__btn {
+  /*Превращает в блочно-строчный элемент*/
+  display: inline-block;
+  height: 50px;
+  line-height: 48px;
+  letter-spacing: 2.8px;
+  color: #fff;
+  /*Внутренний отступ от краев слева и справа*/
+  padding: 0px 60px;
+  font-size: 14px;
+  font-weight: 700;
+  /*Устанавливает заглавные буквы*/
+  text-transform: uppercase;
+  /*Обводка*/
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.block-shop {
+  /*Задается высота для первой колонки рядом со второй*/
+  height: 100%;
+}
+
+.block-shop__row {
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+}
+
+.block-shop__column {
+  /*Каждый из двух блоков занимает одинаковое пространство 50%*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+}
+
+.block-shop__item {
+  height: auto;
+  /*Отделяет нижнюю большую картинку от верхних двух в первой колонке*/
+  padding: 0px 0px 50% 0px;
+}
+
+.block-shop__item_b {
+  /*Делаем вторую колонку задающей высоту всем остальным колонкам*/
+  padding: 0px 0px 200.5% 0px;
+}
+
+.block-shop__item_l {
+  /*Увеличивает размер двух маленьких картинок в верхней части первой колонки*/
+  padding: 0px 0px 100% 0px;
+}
+/*-------------------------------- Медиа-запросы для раздела SHOP --------------------------------*/
+@media (max-width: 1100px) {
+  .shop__body {
+    /*Позволяет Flex-контейнеру ломаться*/
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .shop__column {
+    /*Делает все колонки 50%*/
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+  .shop__column:first-child {
+    /*Первая колонка занимает 100%*/
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+  .shop__column:last-child {
+    /*Последняя колонка занимает 100%*/
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+  .shop__footer {
+    padding: 50px 0;
+  }
+  .shop__btn {
+    padding: 0px 30px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------- Блок SUBSCRIBE */
+.subscribe__body {
+  /*Устанавливает внешний отступ сверху и снизу*/
+  padding: 110px 0;
+  /*Ширина всего блока*/
+  max-width: 534px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.subscribe__logo {
+  /*Устанавливает внтрунний отступ от логотипа вниз*/
+  margin: 0px 0px 39px 0px;
+}
+
+.subscribe__label {
+  color: #848789;
+  font-size: 24px;
+  font-style: italic;
+  margin: 0px 0px 35px 0px;
+}
+
+.subscribe__form {
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+}
+
+.subscribe__input {
+  /*Позволяет увеличиваться и уменьшатся*/
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  /*Внешний отступ справа от кнопки*/
+  padding: 0px 8px 0px 0px;
+}
+
+.subscribe__input .input {
+  width: 100%;
+  height: 69px;
+  border: 1px solid #d3d7d9;
+  background-color: #ffffff;
+  /*Внешние отступы слева и права от текста до краев рамки*/
+  padding: 0px 28px;
+  color: #929292;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.subscribe__input .input.focus {
+  /*Поле остается в фокусе даже если убрать с него указатель но если в поле что то указано*/
+  font-style: normal;
+  color: #333;
+}
+
+.subscribe__input .input.err {
+  /*Форма проверяет правильность ввода почты*/
+  /*Для этого в html в input указаны req email*/
+  border: 1px solid red;
+}
+
+.subscribe__button {
+  /*В отличии от input имеет фиксированное значение*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 126px;
+  flex: 0 0 126px;
+}
+
+.subscribe__btn {
+  width: 100%;
+  height: 69px;
+  line-height: 69px;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 300;
+  background-color: #64c29e;
+}
+/*-------------------------------- Медиа-запросы для раздела SUBSCRIBE --------------------------------*/
+@media (max-width: 750px) {
+  .subscribe__body {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 500px) {
+  .subscribe__form {
+    /*Размещает поля формы друг под другом убрав Flex и вернув блочные элементы*/
+    display: block;
+  }
+  .subscribe__input {
+    /*Внешний отступ справа меняем на оступ вниз*/
+    padding: 0px 0px 8px 0px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------- Блок FOOTER */
+.footer {
+  /*Задается цвет фона*/
+  background-color: #f7f7f7;
+  /*Указываются внешние отступы сверху и снизу*/
+  padding: 100px 0;
+}
+
+.footer__row {
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  /*Выравнивание по центру*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__column {
+  /*Каждая колонка занимает одну треть 33.333%*/
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 33.333%;
+  flex: 0 1 33.333%;
+}
+
+.footer__address {
+  padding: 0px 20px 0px 0px;
+  color: #848789;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.footer__address p:first-child {
+  /*Обращение к первому p и задать ему жирное написание*/
+  font-weight: 700;
+}
+
+.social {
+  /*Вторая колонка*/
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  /*Выравнивание по центру*/
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /*Выравнивание по центру*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.social__link {
+  /*Внутренние отступы между иконками*/
+  margin: 0px 7.5px;
+}
+
+.dev {
+  /*Третья колонка*/
+  /*Миксин @include flexbox();*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  /*Выравнивание по центру*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*Выравнивание с конца*/
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.dev__text {
+  color: #848789;
+  font-size: 14px;
+  font-style: italic;
+  padding: 0px 9px 0px 0px;
+}
+/*-------------------------------- Медиа-запросы для раздела FOOTER --------------------------------*/
+@media (max-width: 1100px) {
+  .footer {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    padding: 30px 0;
+  }
+  .footer__row {
+    /*Перестраивает элементы в колонку*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*Выравнивание по центру*/
+    text-align: center;
+  }
+  .footer__address {
+    /*После применения flex-direction: column нужно убрать внешние отступы что было по центру*/
+    padding: 0;
+  }
+  .footer__social {
+    /*Обращение к среднему блоку и задать ему внутренние отступы вверх и вниз*/
+    margin: 15px 0;
+  }
+}
