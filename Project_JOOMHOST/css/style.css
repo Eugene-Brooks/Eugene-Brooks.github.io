@@ -1,0 +1,566 @@
+/*Стартовые параметры для сайта*/
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #4a6385;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/*Общие параметры размера и отсупов для всего контейнера на сайте*/
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/*---------------------------- Styling the first section "Header". Стилизация первого раздела "Header" ----------------------------*/
+
+
+.header{
+    border-top: 1px solid #2c7de8;
+}
+
+/*Позиционирование элементов "Внутренней обертки" для раздела "Header"*/
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 87px;
+}
+
+/*Стилизация элементов "Меню" для адаптивности для раздела "Header"*/
+.btn__menu{
+    width: 40px;
+    display: none;
+}
+
+.btn__menu div{
+    height: 5px;
+    background-color: #000;
+    margin-bottom: 5px;
+}
+
+/*Позиционирование элементов "Меню" для раздела "Header"*/
+.menu__list{
+    display: flex;
+}
+
+/*Стилизация элементов "Меню" для раздела "Header"*/
+
+/*.menu__list li + li - не будет отступа 38px перед самым первым элементом*/
+.menu__list li{
+    margin-left: 38px;
+}
+
+.menu__list a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #2f3f54;
+    font-weight: 700;
+}
+
+
+/*---------------------------- Styling the second section "Top". Стилизация второго раздела "Top" ----------------------------*/
+
+
+.top{
+    background-color: #2c7de8;
+    padding-top: 150px;
+    padding-bottom: 180px;
+}
+
+/*Позиционирование элементов "Левой и Правой половины" для раздела "Top"*/
+.top__inner{
+    display: flex;
+}
+
+/*Стилизация элементов "Левой половины" для раздела "Top"*/
+.top-info{
+    max-width: 555px;
+    margin-right: 35px;
+    color: #fff;
+}
+
+/*Стилизация заголовка "Левой половины" для раздела "Top"*/
+.top-info__title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+}
+
+/*Стилизация описания "Левой половины" для раздела "Top"*/
+.top-info__descr{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 52px;
+    margin-bottom: 35px;
+}
+
+.top-info__descr span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+}
+
+/*Стилизация списка преимуществ "Левой половины" для раздела "Top"*/
+.top-info__list{
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.top-info__list li{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 3px;
+    position: relative;
+    padding-left: 24px;
+}
+
+/*Добавление иконки для списка преимуществ "Левой половины" для раздела "Top"*/
+.top-info__list li::before{
+    content: "";
+    background-image: url('../images/list-icon.png');
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*Стилизация кнопки "Левой половины" для раздела "Top"*/
+.top-info__btn{
+    color: #fff;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    padding: 13px 44px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+
+/*Стилизация элементов "Правой половины" для раздела "Top"*/
+.top-images__box{
+    position: relative;
+}
+
+/*Стилизация белого круга с информацией "Правой половины" для раздела "Top"*/
+.top-images__circle{
+    width: 230px;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #212121;
+    position: absolute;
+    top: -65px;
+    right: -60px;
+}
+
+/*Стилизация заголовка белого круга с информацией "Правой половины" для раздела "Top"*/
+.top-images__title{
+    margin-bottom: 10px;
+    text-align: left;
+    width: 140px;
+}
+
+/*Стилизация цены белого круга с информацией "Правой половины" для раздела "Top"*/
+.top-images__price{
+    font-weight: 700;
+    font-size: 54px;
+    margin-bottom: 5px; 
+}
+
+/*Стилизация даты белого круга с информацией "Правой половины" для раздела "Top"*/
+.top-images__date{
+    text-align: right;
+    width: 140px;
+    padding-top: 10px;
+}
+
+
+/*---------------------------- Stylization of the third section "Price". Стилизация третьего раздела "Price" ----------------------------*/
+
+
+.price{
+    padding: 150px 0 180px;
+}
+
+/* Стилизация заголовка в разделе "Price"*/
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #2f3f54;
+}
+
+/* Стилизация слова в заголовке в разделе "Price"*/
+.title span{
+    color: #2c7de8;
+}
+
+/* Стилизация описания заголовка в разделе "Price"*/
+.price__descr{
+    text-align: center;
+    max-width: 594px;
+    margin: 35px auto 125px;
+}
+
+/* Стилизация слова в описании заголовка в разделе "Price"*/
+.price__descr span{
+    color: #42d6c1;
+}
+
+/*Позиционирование блока с предложениями в разделе "Price"*/
+.price__items{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Стилизация предложения в блоке с предложениями в разделе "Price"*/
+.price-item{
+    max-width: 360px;
+    box-shadow: 0px 21px 49px 1px rgba(41, 44, 61, 0.15);
+    padding: 0 50px 60px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Стилизация цены в блоке с предложениями в разделе "Price"*/
+.price-item__number{
+    width: 265px;
+    height: 465px;
+    border-radius: 136px;
+    color: #fff;
+    background-color: #2c7de8;
+    position: absolute;
+    top: -370px;
+    font-weight: 700;
+    font-size: 33px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+/* Стилизация слова в цене в блоке с предложениями в разделе "Price"*/
+.price-item__number span{
+    font-size: 16px;
+}
+
+/*Позиционирование картинки в блоке с предложениями в разделе "Price"*/
+.price-item__images{
+    padding-top: 120px;
+    text-align: center;
+    margin-bottom: 30px;
+    min-height: 251px;
+}
+
+/*Стилизация заголовка в блоке с предложениями в разделе "Price"*/
+.price-item__title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    color: #2c7de8;
+}
+
+/*Стилизация описания в блоке с предложениями в разделе "Price"*/
+.price-item__text{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 50px;
+}
+
+/*Стилизация списка в блоке с предложениями в разделе "Price"*/
+.price-item__list{
+    margin-bottom: 75px;
+    list-style: none;
+}
+
+.price-item__list li{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    padding-left: 36px;
+    position: relative;
+}
+
+/*Добавление иконки для списка преимуществ в блоке с предложениями в разделе "Price"*/
+.price-item__list li::before{
+    content: "";
+    background-image: url('../images/price-icon.png');
+    width: 15px;
+    height: 11px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*Стилизация кнопки в блоке с предложениями в разделе "Price"*/
+.price-item__btn{
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+    background-color: #2c7de8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+/*---------------------------- Stylization of the fourth section "Reviews". Стилизация четвертого раздела "Reviews" ----------------------------*/
+
+
+.reviews{
+    padding: 120px 0;
+    background-color: #fafafa;
+}
+
+/*Позиционирование слайдера в разделе "Reviews"*/
+.reviews-slider{
+    margin-top: 160px;
+}
+
+/*jQuery, растягивает снаружи блок слайдера в разделе "Reviews"*/
+.reviews-slider .slick-list{
+    margin: 0 -50px;
+}
+/*jQuery, выталкивает изнутри блок слайдера в разделе "Reviews"*/
+.reviews-slider .slick-slide{
+    margin: 0 50px;
+    padding-bottom: 70px;
+}
+
+/*Позиционирование элементов слайда в слайдере в разделе "Reviews"*/
+.reviews-box{
+    display: flex;
+    box-shadow: 0px 21px 49px 1px rgba(41, 44, 61, 0.15);
+}
+
+/*Стилизация и позиционирование точек под слайдами в слайдере в разделе "Reviews"*/
+.reviews-slider .slick-dots{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.reviews-slider .slick-dots li{
+    margin: 0 8px;
+}
+/*Cоздание пустой области на активной точке под слайдом в слайдере в разделе "Reviews"*/
+.reviews-slider .slick-dots li.slick-active button{
+    background-color: #fff;
+    border: 2px solid #2575e7;
+}
+.reviews-slider .slick-dots button{
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+    background-color: #2575e7;
+    outline: none;
+}
+
+/*Стилизация изображения внутри слайда в слайдере в разделе "Reviews"*/
+.reviews-box__images{
+    background-color: #2575e7;
+    width: 190px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews-box__images img{
+    border-radius: 50%;
+}
+
+/*Стилизация текста внутри слайда в слайдере в разделе "Reviews"*/
+.reviews-box__content{
+    background-color: #fff;
+    width: 330px;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 40px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*Стилизация текста слайда в слайдере в разделе "Reviews"*/
+.reviews-box__text{
+    margin-bottom: 30px;
+}
+
+.reviews-box__author span{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #2575e7;
+}
+
+
+/*---------------------------- Stylization of the fifth section "Partners". Стилизация пятого раздела "Partners" ----------------------------*/
+
+
+.partners{
+    padding: 105px 0;
+    background-color: #fff;
+}
+
+.partners-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners-img{
+    opacity: 0.5;
+}
+
+.partners-img:hover{
+    opacity: 1;
+}
+
+
+/*---------------------------- Stylization of the sixth section "Footer". Стилизация шестого раздела "Footer" ----------------------------*/
+
+
+.footer{
+    /*background-color: #304054;*/
+    background-image: url('../images/footer-bg.jpg');
+    padding: 80px 0 125px;
+}
+
+/*Позиционирование элементов в разделе "Footer"*/
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Стилизация первого блока в разделе "Footer"*/
+.footer-col__logo{
+    width: 263px;
+}
+
+/*Стилизация логотипа первого блока в разделе "Footer"*/
+.footer__logo{
+    margin-bottom: 30px;
+}
+
+/*Стилизация текста первого блока в разделе "Footer"*/
+.footer__text{
+    font-size: 13px;
+    line-height: 22px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+}
+
+/*Стилизация пунктов второго и третьего блока в разделе "Footer"*/
+.footer-menu{
+    width: 165px;
+}
+
+/*Стилизация заголовков в блоках в разделе "Footer"*/
+.footer__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #d0e4ff;
+    margin-bottom: 30px;
+}
+
+/*Стилизация списков в блоках в разделе "Footer"*/
+.footer__list{
+    list-style: none;  
+}
+
+/*Стилизация пунктов списка в блоках в разделе "Footer"*/
+.footer__list a{
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #718db2;
+}
+
+/*Стилизация формы в четвертом блоке в разделе "Footer"*/
+.footer-form{
+    width: 263px;
+}
+
+/*Стилизация поля ввода формы в четвертом блоке в разделе "Footer"*/
+.footer-form input,
+.footer-form textarea{
+    border: 1px solid rgba(255, 255, 255, .05);
+    background-color: transparent;
+    height: 38px;
+    display: block;
+    width: 100%;
+    padding: 0 12px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: #718db2;
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: #718db2;
+}
+
+/*Стилизация поля ввода сообщения формы в четвертом блоке в разделе "Footer"*/
+.footer-form textarea{
+    padding: 12px;
+    height: 85px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+/*Стилизация кнопки формы в четвертом блоке в разделе "Footer"*/
+.footer-form button{
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    background-color: #2575e7;
+    padding: 10px;
+}
